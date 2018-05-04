@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -97,8 +97,7 @@
 <text x="-6.731" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 <package name="TOUCHPAD">
-<rectangle x1="-7.62" y1="-7.62" x2="5.08" y2="5.08" layer="17"/>
-<pad name="P$1" x="-1.27" y="-1.27" drill="0.6" shape="square"/>
+<pad name="P$2" x="0" y="0" drill="0.635" diameter="11.43"/>
 </package>
 </packages>
 <symbols>
@@ -123,13 +122,13 @@
 <wire x1="10.16" y1="7.62" x2="-25.4" y2="7.62" width="0.254" layer="94"/>
 </symbol>
 <symbol name="TOUCHPAD">
-<wire x1="-68.58" y1="20.32" x2="-58.42" y2="20.32" width="0.254" layer="94"/>
-<wire x1="-58.42" y1="20.32" x2="-58.42" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-58.42" y1="10.16" x2="-68.58" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-68.58" y1="10.16" x2="-68.58" y2="20.32" width="0.254" layer="94"/>
-<pin name="T1" x="-53.34" y="15.24" length="middle" rot="R180"/>
-<text x="-68.58" y="22.86" size="1.778" layer="95">&gt;NAME</text>
-<text x="-68.58" y="7.62" size="1.778" layer="95">&gt;VALUE</text>
+<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<pin name="T1" x="10.16" y="0" length="middle" rot="R180"/>
+<text x="-5.08" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="95">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -163,10 +162,13 @@
 </deviceset>
 <deviceset name="TOUCHKEY">
 <gates>
-<gate name="G$1" symbol="TOUCHPAD" x="43.18" y="-15.24"/>
+<gate name="G$1" symbol="TOUCHPAD" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="TOUCHPAD">
+<connects>
+<connect gate="G$1" pin="T1" pad="P$2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
