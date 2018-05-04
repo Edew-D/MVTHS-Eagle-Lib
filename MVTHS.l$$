@@ -137,6 +137,8 @@
 <rectangle x1="-0.3048" y1="0.9652" x2="0.3048" y2="1.5748" layer="51"/>
 <rectangle x1="-0.3048" y1="-1.5748" x2="0.3048" y2="-0.9652" layer="51"/>
 </package>
+<package name="TOUCHPADLIGHT">
+</package>
 </packages>
 <symbols>
 <symbol name="7400">
@@ -199,6 +201,8 @@
 <text x="5.715" y="0" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="1" x="0" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
 <pin name="2" x="2.54" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="TOUCHPADLIGHT">
 </symbol>
 </symbols>
 <devicesets>
