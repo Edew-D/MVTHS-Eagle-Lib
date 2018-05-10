@@ -138,6 +138,20 @@
 </package>
 <package name="TOUCHPADLIGHT">
 </package>
+<package name="TOUCHPAD-SMD">
+<polygon width="0.127" layer="1">
+<vertex x="-7.62" y="0"/>
+<vertex x="-7.62" y="5.08" curve="-90"/>
+<vertex x="-5.08" y="7.62"/>
+<vertex x="5.08" y="7.62" curve="-90"/>
+<vertex x="7.62" y="5.08"/>
+<vertex x="7.62" y="-5.08" curve="-90"/>
+<vertex x="5.08" y="-7.62"/>
+<vertex x="-5.08" y="-7.62" curve="-90"/>
+<vertex x="-7.62" y="-5.08"/>
+</polygon>
+<smd name="P$1" x="0" y="0" dx="1.27" dy="0.635" layer="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="7400">
@@ -241,6 +255,14 @@
 <device name="" package="TOUCHPAD">
 <connects>
 <connect gate="G$1" pin="T1" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD" package="TOUCHPAD-SMD">
+<connects>
+<connect gate="G$1" pin="T1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -137,6 +137,20 @@
 <rectangle x1="-0.3048" y1="-1.5748" x2="0.3048" y2="-0.9652" layer="51"/>
 </package>
 <package name="TOUCHPADLIGHT">
+</package>
+<package name="TOUCHPAD-SMD">
+<polygon width="0.127" layer="1">
+<vertex x="-7.62" y="0"/>
+<vertex x="-7.62" y="5.08" curve="-90"/>
+<vertex x="-5.08" y="7.62"/>
+<vertex x="5.08" y="7.62" curve="-90"/>
+<vertex x="7.62" y="5.08"/>
+<vertex x="7.62" y="-5.08" curve="-90"/>
+<vertex x="5.08" y="-7.62"/>
+<vertex x="-5.08" y="-7.62" curve="-90"/>
+<vertex x="-7.62" y="-5.08"/>
+</polygon>
+<smd name="P$1" x="0" y="0" dx="1.27" dy="0.635" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -270,11 +284,6 @@
 <gate name="G$1" symbol="HEADER12L" x="0" y="-2.54" swaplevel="1"/>
 </gates>
 <devices>
-<device name="" package="HEADER12">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
 <device name="DD" package="HEADER12">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
